@@ -10,7 +10,7 @@ const copy = async () => {
     const sourcePath = `${path}/${sourceFolder}`;
     const targetPath = `${path}/${targetFolder}`;
     const canCopy = 
-        (await doesFileExist(sourcePath)) ||
+        (await doesFileExist(sourcePath)) &&
         !(await doesFileExist(targetPath));
 
     if (canCopy) {

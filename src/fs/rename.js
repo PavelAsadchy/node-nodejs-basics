@@ -10,7 +10,7 @@ const rename = async () => {
     const wrongFilePath = `${path}/files/${wrongFileName}`;
     const properFilePath = `${path}/files/${properFileName}`;
     const canRename =
-        (await doesFileExist(wrongFileName)) ||
+        (await doesFileExist(wrongFileName)) &&
         !(await doesFileExist(properFileName));
 
     if (canRename) {
