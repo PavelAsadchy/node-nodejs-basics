@@ -4,6 +4,7 @@ import { cpus } from 'node:os';
 const performCalculations = async () => {
     // Write your code here
     const path = './src/wt/worker.js';
+    
     const cpuCores = cpus();
     const res = [];
     const startStreams = 10;
